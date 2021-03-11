@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Order.js Order with props 1`] = `
+<div
+  className="Order"
+>
+  <div
+    className="Order-header"
+  >
+    <span
+      className="Order-shop"
+    >
+      text
+    </span>
+    <span
+      id="date"
+    >
+      9 декабря, вс, 2018 год
+    </span>
+  </div>
+  <div
+    className="Order-items"
+  >
+    <div
+      className="Order-item"
+      key="0"
+    >
+      1
+    </div>
+    <div
+      className="Order-item"
+      key="1"
+    >
+      2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Order.js order is undefined 1`] = `""`;
+
+exports[`Order.js order.date is undefined 1`] = `""`;
+
+exports[`Order.js order.items have 0 length 1`] = `
+<div
+  className="Order"
+>
+  <div
+    className="Order-header"
+  >
+    <span
+      className="Order-shop"
+    >
+      text
+    </span>
+    <span
+      id="date"
+    >
+      9 декабря, вс, 2018 год
+    </span>
+  </div>
+  <div
+    className="Order-items"
+  />
+</div>
+`;
+
+exports[`Order.js order.items is undefined 1`] = `
+<div
+  className="Order"
+>
+  <div
+    className="Order-header"
+  >
+    <span
+      className="Order-shop"
+    >
+      text
+    </span>
+    <span
+      id="date"
+    >
+      9 декабря, вс, 2018 год
+    </span>
+  </div>
+  <div
+    className="Order-items"
+  />
+</div>
+`;
+
+exports[`Order.js order.shop is undefined 1`] = `""`;
+
+exports[`Order.js order.shopa and order.date are undefined 1`] = `""`;
+
+exports[`Order.js render without props 1`] = `""`;
