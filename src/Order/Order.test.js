@@ -91,7 +91,7 @@ describe('Order.js', () => {
     expect(shallowToJson(output)).toMatchSnapshot();
   });
 
-  it('order.shopa and order.date are undefined', () => {
+  it('order.shops and order.date are undefined', () => {
     const order = {
       date: undefined,
       shop: undefined,
