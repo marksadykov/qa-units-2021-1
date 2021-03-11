@@ -19,7 +19,7 @@ describe('sortByItemCount function', () => {
 			items: ['1', '2'],
 		};
 		const result = sortByItemCount(order1, order2);
-		expect(result).toEqual(0);
+		expect(result).toBe(0);
 	});
 
 	it('order2 is null', () => {
@@ -29,7 +29,7 @@ describe('sortByItemCount function', () => {
 
 		const order2 = null;
 		const result = sortByItemCount(order1, order2);
-		expect(result).toEqual(0);
+		expect(result).toBe(0);
 	});
 
 	it('orders are undefined', () => {
@@ -44,7 +44,7 @@ describe('sortByItemCount function', () => {
 			items: ['1', '2'],
 		};
 		const result = sortByItemCount(order1, order2);
-		expect(result).toEqual(0);
+		expect(result).toBe(0);
 	});
 
 	it('order2 is undefined', () => {
@@ -54,7 +54,7 @@ describe('sortByItemCount function', () => {
 
 		const order2 = undefined;
 		const result = sortByItemCount(order1, order2);
-		expect(result).toEqual(0);
+		expect(result).toBe(0);
 	});
 
 	it('orders.items are undefined', () => {
@@ -143,7 +143,7 @@ describe('sortByItemCount function', () => {
 describe('sortByDate function', () => {
 	it('orders are null', () => {
 		const result = sortByDate(null, null);
-		expect(result).toEqual(0);
+		expect(result).toBe(0);
 	});
 
 	it('order1 is null', () => {
@@ -153,7 +153,7 @@ describe('sortByDate function', () => {
 			date: 100,
 		};
 		const result = sortByDate(order1, order2);
-		expect(result).toEqual(0);
+		expect(result).toBe(0);
 	});
 
 	it('order2 is null', () => {
@@ -163,7 +163,7 @@ describe('sortByDate function', () => {
 
 		const order2 = null;
 		const result = sortByDate(order1, order2);
-		expect(result).toEqual(0);
+		expect(result).toBe(0);
 	});
 
 	it('orders are undefined', () => {
@@ -178,7 +178,7 @@ describe('sortByDate function', () => {
 			date: 100,
 		};
 		const result = sortByDate(order1, order2);
-		expect(result).toEqual(0);
+		expect(result).toBe(0);
 	});
 
 	it('order2 is undefined', () => {
@@ -188,7 +188,7 @@ describe('sortByDate function', () => {
 
 		const order2 = undefined;
 		const result = sortByDate(order1, order2);
-		expect(result).toEqual(0);
+		expect(result).toBe(0);
 	});
 
 	it('orders.date are undefined', () => {
@@ -273,7 +273,7 @@ describe('sortByDate function', () => {
 describe('getSortFunction function', () => {
 	it('sortType is null', () => {
 		const result = getSortFunction(null);
-		expect(result).toEqual(undefined);
+		expect(result).toBeUndefined();
 	});
 
 	it('sortType is sortTypes.DATE', () => {
@@ -290,25 +290,25 @@ describe('getSortFunction function', () => {
 describe('sortOrders function', () => {
 	it('orders is undefined', () => {
 		const result = sortOrders(undefined, sortByDate);
-		expect(result).toEqual(undefined);
+		expect(result).toBeUndefined();
 	});
 
 	it('orders have 0 length', () => {
 		const orders = [];
 		const result = sortOrders(orders, sortByDate);
-		expect(result).toEqual(undefined);
+		expect(result).toBeUndefined();
 	});
 
 	it('sortFunction is undefined', () => {
 		const orders = [1, 2];
 		const result = sortOrders(orders, undefined);
-		expect(result).toEqual(undefined);
+		expect(result).toBeUndefined();
 	});
 
 	it('sortFunction is null', () => {
 		const orders = [1, 2];
 		const result = sortOrders(orders, null);
-		expect(result).toEqual(undefined);
+		expect(result).toBeUndefined();
 	});
 
 	it('sortFunction is sortByDate', () => {
@@ -336,7 +336,7 @@ describe('sortOrders function', () => {
 			}
 		];
 		const result = sortOrders(orders, sortByDate);
-		expect(result).toEqual(undefined);
+		expect(result).toBeUndefined();
 		expect(orders).toEqual(ordersSorted);
 	});
 
@@ -365,7 +365,7 @@ describe('sortOrders function', () => {
 			}
 		];
 		const result = sortOrders(orders, sortByItemCount);
-		expect(result).toEqual(undefined);
+		expect(result).toBeUndefined();
 		expect(orders).toEqual(ordersSorted);
 	});
 });

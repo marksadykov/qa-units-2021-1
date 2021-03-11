@@ -1,8 +1,8 @@
 jest.mock('../utils/getDate');
 
 import React from 'react'
-import { shallow, configure } from 'enzyme';
-import { shallowToJson } from 'enzyme-to-json';
+import {shallow} from 'enzyme';
+import {shallowToJson} from 'enzyme-to-json';
 import Enzyme from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import Order from "./Order";
