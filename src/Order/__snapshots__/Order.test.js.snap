@@ -91,6 +91,6 @@ exports[`Order.js order.items is undefined 1`] = `
 
 exports[`Order.js order.shop is undefined 1`] = `""`;
 
-exports[`Order.js order.shopa and order.date are undefined 1`] = `""`;
+exports[`Order.js order.shops and order.date are undefined 1`] = `""`;
 
 exports[`Order.js render without props 1`] = `""`;
