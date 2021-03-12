@@ -58,7 +58,6 @@ describe('sortByItemCount function', () => {
 	});
 
 	it('orders.items are undefined', () => {
-
 		const order1 = {
 			items: undefined,
 		};
@@ -72,7 +71,6 @@ describe('sortByItemCount function', () => {
 	});
 
 	it('orders1.items is undefined', () => {
-
 		const order1 = {
 			items: undefined,
 		};
@@ -86,7 +84,6 @@ describe('sortByItemCount function', () => {
 	});
 
 	it('orders2.items is undefined', () => {
-
 		const order1 = {
 			items: ['1', '2'],
 		};
