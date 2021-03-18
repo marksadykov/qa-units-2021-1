@@ -37,10 +37,6 @@ exports[`Order.js Order with props 1`] = `
 </div>
 `;
 
-exports[`Order.js order is undefined 1`] = `""`;
-
-exports[`Order.js order.date is undefined 1`] = `""`;
-
 exports[`Order.js order.items have 0 length 1`] = `
 <div
   className="Order"
@@ -88,9 +84,3 @@ exports[`Order.js order.items is undefined 1`] = `
   />
 </div>
 `;
-
-exports[`Order.js order.shop is undefined 1`] = `""`;
-
-exports[`Order.js order.shops and order.date are undefined 1`] = `""`;
-
-exports[`Order.js render without props 1`] = `""`;

@@ -46,7 +46,6 @@
       "src/Order/*.{js,jsx,ts,tsx}",
       "src/utils/sortOrders.js"
     ],
-
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],

@@ -2,7 +2,6 @@ jest.mock('../utils/getDate');
 
 import React from 'react'
 import {shallow} from 'enzyme';
-import {shallowToJson} from 'enzyme-to-json';
 import Enzyme from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import Order from "./Order";
@@ -11,14 +10,12 @@ import {getDate} from "../utils/getDate";
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('Order.js', () => {
-  getDate.mockReturnValue('9 декабря, вс, 2018 год');
 
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
+  beforeAll(() => getDate.mockReturnValue('9 декабря, вс, 2018 год'));
+
+  afterAll(() => jest.clearAllMocks());
 
   it('Order with props', () => {
-
     const order = {
       date: 1544356800000,
       shop: 'text',
@@ -28,7 +25,10 @@ describe('Order.js', () => {
     const output = shallow(
         <Order order={order} />
     );
-    expect(shallowToJson(output)).toMatchSnapshot();
+    expect(output).toMatchSnapshot();
+  });
+
+  it('Order with props calls', () => {
     expect(getDate).toHaveBeenCalledTimes(1);
   });
 
@@ -42,8 +42,11 @@ describe('Order.js', () => {
     const output = shallow(
         <Order order={order} />
     );
-    expect(shallowToJson(output)).toMatchSnapshot();
-    expect(getDate).toHaveBeenCalledTimes(1);
+    expect(output).toMatchSnapshot();
+  });
+
+  it('order.items is undefined calls', () => {
+    expect(getDate).toHaveBeenCalledTimes(2);
   });
 
   it('order.items have 0 length', () => {
@@ -56,8 +59,11 @@ describe('Order.js', () => {
     const output = shallow(
         <Order order={order} />
     );
-    expect(shallowToJson(output)).toMatchSnapshot();
-    expect(getDate).toHaveBeenCalledTimes(1);
+    expect(output).toMatchSnapshot();
+  });
+
+  it('order.items have 0 length calls', () => {
+    expect(getDate).toHaveBeenCalledTimes(3);
   });
 
   it('order is undefined', () => {
@@ -66,7 +72,7 @@ describe('Order.js', () => {
     const output = shallow(
         <Order order={order} />
     );
-    expect(shallowToJson(output)).toMatchSnapshot();
+    expect(output).toEqual({});
   });
 
   it('order.shop is undefined', () => {
@@ -77,7 +83,7 @@ describe('Order.js', () => {
     const output = shallow(
         <Order order={order} />
     );
-    expect(shallowToJson(output)).toMatchSnapshot()
+    expect(output).toEqual({});
   });
 
   it('order.date is undefined', () => {
@@ -88,7 +94,7 @@ describe('Order.js', () => {
     const output = shallow(
         <Order order={order} />
     );
-    expect(shallowToJson(output)).toMatchSnapshot();
+    expect(output).toEqual({});
   });
 
   it('order.shops and order.date are undefined', () => {
@@ -100,14 +106,14 @@ describe('Order.js', () => {
     const output = shallow(
         <Order order={order} />
     );
-    expect(shallowToJson(output)).toMatchSnapshot();
+    expect(output).toEqual({});
   });
 
   it('render without props', () => {
     const output = shallow(
         <Order />
     );
-    expect(shallowToJson(output)).toMatchSnapshot();
+    expect(output).toEqual({});
   });
 });
 
